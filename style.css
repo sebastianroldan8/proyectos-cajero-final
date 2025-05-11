@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Estilo de tarjeta contenedora */
+.login-container,
+.register-container,
+.menu-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 35px 40px;
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs y select */
+input,
+select {
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  background: #ffffffdd;
+  color: #333;
+  transition: 0.3s ease;
+  outline: none;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 3px #ffb347aa;
+}
+
+/* Botones */
+button {
+  padding: 14px;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 120, 160, 0.3);
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #ff6a95, #ff9aaf);
+}
+
+/* Mensajes de error o información */
+.message {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #ffd6da;
+}
+
+/* Enlaces */
+a {
+  color: #ffdf8c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #fff6b1;
+}
+
+/* Menú principal */
+.menu-container button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#menuOutput {
+  margin-top: 20px;
+  background: #ffffffcc;
+  color: #333;
+  padding: 15px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.4;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container,
+  .register-container,
+  .menu-container {
+    padding: 25px 20px;
+  }
+}
